@@ -7,20 +7,23 @@ export const LocationAndTemperature = ({ weatherData, elevation }) => {
 
   return (
     <div className='locationAndTemperatureWrap'>
-      {elevation && (
-        <div className='elevationWrap'>
-          <GiMountainCave />
-          <p>{elevation}</p>
-        </div>
-      )}
       <h2>{location.name}</h2>
-      <p>{location.localtime.slice(location.localtime.length - 5)}</p>
-      {condition && (
+      <div className='temperatureAndEleveationWrap'>
+        <h4>{current.temp_c} °C </h4>
+        {elevation && (
+          <div className='elevationWrap'>
+            <GiMountainCave />
+            <p>{elevation}</p>
+          </div>
+        )}
+      </div>
+      {current && condition && (
         <>
           <img src={condition.icon} alt={`${condition.text} icon`} />
           <p>{condition.text}</p>
         </>
       )}
+      <p>{location.localtime.slice(location.localtime.length - 5)}</p>
     </div>
   )
 }
