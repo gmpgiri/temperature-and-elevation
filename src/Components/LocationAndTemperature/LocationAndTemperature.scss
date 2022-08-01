@@ -1,0 +1,20 @@
+.locationAndTemperatureWrap {
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 10vh;
+    h2 {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 36px;
+        padding-bottom: 12px;
+    }
+}
+.elevationWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        padding-left: 6px;
+    }
+}
